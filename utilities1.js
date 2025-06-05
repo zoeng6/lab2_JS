@@ -1,30 +1,26 @@
-export const checkBalance = (Name) => {
+export const checkBalance = (fName) => {
 
-    switch (Name) {
+    switch (fName) {
         case "Zoe":
-            return 100
+            return 1000
         case "Andres":
-            return 200
+            return 2000
         case "Jose":
-            return 300
+            return 3000
         default:
-            return 500
+            return 5000
     } 
 };
 
-export const welcomeUser = (Name) => {
-    console.log(`Welcome back, ${Name} ! How can I help you today?`);
-    
+export const welcomeUser = (fName,lName) => {
+    console.log(`Welcome back, ${fName} ${lName}! How can I help you today?`);
 }
 
-export const deposit = (Amount,User) => {
-    var balance = checkBalance(User);
-    return balance + Amount ; 
+export const currencyConverter = (CAD) => {
+    return CAD*0.73 
+} 
 
-}
-
-export const withdraw = (Amount,User) => {
-    var balance = checkBalance(User);
-    return balance - Amount; 
+export const gicDeposit = (principal,rate,time) => {
+    return (principal*rate*time)+principal; 
 }
 
